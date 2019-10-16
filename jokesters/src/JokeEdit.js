@@ -14,7 +14,6 @@ export default class JokeEdit extends Component {
 		let nam = event.target.name;
 		let val = event.target.value;
 		if (nam === 'punchline') {
-		
 		}
 		this.setState({ [nam]: val });
 	};
@@ -32,21 +31,28 @@ export default class JokeEdit extends Component {
 					</h2>
 				</div>
 				<form>
-				
 					<p>Joke Set Up:</p>
 					<input type="text" name="setup" onChange={this.myChangeHandler} />
 					<p>Punch Line:</p>
 					<input type="text" name="punchline" onChange={this.myChangeHandler} />
-				</form>
-
-				<h1>
-					Joke preview  </h1>
 					<br></br>
-					<h2>
+				
+					<button type="submit" >
+						Delete it
+					</button>
+
+
+				<h1>Joke preview </h1>
+				<br></br>
+				<h2>
 					Setup : {this.state.setup}
 					<br></br>
 					Punchline : {this.state.punchline}
 				</h2>
+				<button type="submit" >
+						Submit
+					</button>
+				</form>
 			</div>
 		);
 	}
