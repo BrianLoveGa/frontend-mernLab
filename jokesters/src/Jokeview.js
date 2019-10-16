@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import './App.css';
-import jokelist from '../data/jokelist.json';
+import jokelist from './data/jokelist.json';
 
 export default class Jokeview extends Component {
 	render() {
-		let joke = jokelist.find(joke => joke.id === this.props.match.params.name);
+		let joke = jokelist.find(joke => joke.id === this.props.match.params.id);
 		return (
 			<div>
 				<h2 className="about">Here's the funny up close.</h2>
@@ -16,13 +17,11 @@ export default class Jokeview extends Component {
 					<h2>Punchline</h2>
 					<h3>{joke.punchline}</h3>
 				</div>
-				<a
-					className="button"
-					href="/jokes/{{id}}/edit"
-					rel="noopener noreferrer"
-				>
-					Edit This Joke{' '}
-				</a>
+				<Link to={`/jokes/edit/${joke.id}`}>Edit This Joke</Link>
+					
+				
+					
+				
 			</div>
 		);
 	}

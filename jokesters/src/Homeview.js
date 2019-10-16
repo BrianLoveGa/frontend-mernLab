@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import listOfJokes from "./data/jokelist.json";
+import listOfJokes from './data/jokelist.json';
 import { Link } from "react-router-dom";
 
 // Dashboard page
 
 class Homeview extends Component {
   render() {
-    let jokes = listOfJokes.map(item => {
+    let jokes = listOfJokes.map((joke, i) => {
       return (
-        <li>
-          {item.setup}{" "}
-          <Link to={`/homeview/${item.punchline}`}>{item.punchline}</Link>
+        <li key={i}>
+          {joke.setup}{" "}
+          <Link to={`/jokes/${joke.id}`}>{joke.punchline}</Link>
         </li>
       );
     });

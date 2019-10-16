@@ -15,15 +15,15 @@ export default class Jokeadd extends Component {
 				<br></br>
 				<form>
 					<label for="id">joke id</label>
-					<input> type="text" name="id" value="Joke id (a number)" </input>
+					{/* <input> type="text" name="id" value="Joke id (a number)" </input> */}
 					<label for="setup">Setup for Joke</label>
-					<input>type="text" name="setup" value=" Joke set-up "</input>
+					{/* <input>type="text" name="setup" value=" Joke set-up "</input> */}
 					<label for="punchline">Punchline </label>
-					<input>
+					{/* <input>
 						{' '}
 						type="text" name="punchline"value="and the funny punchline"{' '}
 					</input>
-					<input> class="button" type="submit" value="Add your joke"</input>
+					<input> class="button" type="submit" value="Add your joke"</input> */}
 				</form>
 			</div>
 		);
