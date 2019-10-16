@@ -12,9 +12,9 @@ export default class JokeEdit extends Component {
 					<br></br>
 					This is also where you delete a joke.
 				</h2>
-				<h3>the Joke premise {joke.setup} </h3>
+				<h3>the Joke premise :<br></br>{joke.setup} </h3>
 				
-				<h2>Punchline {joke.punchline} </h2>
+				<h2>Punchline :<br></br>{joke.punchline} </h2>
 				
 				<h3>
 					Click the delete button below to remove a joke once we figure out

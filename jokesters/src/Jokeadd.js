@@ -15,8 +15,10 @@ export default class Jokeadd extends Component {
 				<br></br>
 				<form>
 					<label for="id">joke id</label>
+					<br></br>
 					{/* <input> type="text" name="id" value="Joke id (a number)" </input> */}
 					<label for="setup">Setup for Joke</label>
+					<br></br>
 					{/* <input>type="text" name="setup" value=" Joke set-up "</input> */}
 					<label for="punchline">Punchline </label>
 					{/* <input>
