@@ -1,26 +1,59 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Link, Redirect, Switch } from "react-router-dom";
 import './App.css';
+import Homeview from './Homeview';
+import JokeEdit from './JokeEdit';
+import Jokeview from './Jokeview';
+import jokelist from '../data/jokelist.json';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+export default class APP extends Component {
+ 
+  render() {
+    return (
+      <div>
+        <header className="App-header">Knock Knocks</header>
+        <div className="nav">
+          <div className="navItem">
+            <Link to="/">Jokes</Link>
+          </div>
+          <div className="navItem">
+            <Link to="/jokes/add"></Link>
+           
+          </div>
+        </div>
+
+        <div className="main">
+          <Switch>
+            <Route
+              exact
+              path="/jokes"
+              component={Homeview}/>
+            />
+            <Route 
+            exact
+            path="/jokes/add"
+            component={Jokeadd}
+            />
+            <Route
+            exact
+            path="/jokes/:id/edit"
+            render={(props) => <JokeEdit {...props} jokelist={jokelist}/>}/>
+            <Route
+            exact
+              path="/jokes/:id"
+              render={(props) => <Jokeview {...props} jokelist={jokelist} />
+              }
+              
+            />
+
+<Route path="/*" render={() => <Redirect to="/joke" />} />
+        
+          </Switch>
+        </div>
+      </div>
+    );
+  }
 }
-
-export default App;
