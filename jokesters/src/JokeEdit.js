@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './JokeEdit.css';
-import jokelist from './data/jokelist.json';
+// import jokelist from './data/jokelist.json';
 
 export default class JokeEdit extends Component {
 	constructor(props) {
@@ -19,7 +19,7 @@ export default class JokeEdit extends Component {
 	};
 
 	render() {
-		let joke = jokelist.find(joke => joke.id === this.props.match.params.id);
+		// let joke = jokelist.find(joke => joke.id === this.props.match.params.id);
 
 		return (
 			<div className="editjk">

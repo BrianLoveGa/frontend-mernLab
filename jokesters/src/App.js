@@ -11,7 +11,7 @@ export default class APP extends Component {
 	render() {
 		return (
 			<div>
-				<header className="App-header">Knock Knocks</header>
+				<header className="App-header">Joke Makers .com (By Brian and James)</header>
 				<div className="nav">
 					<div className="navItem">
 						<Link to="/">Jokes</Link>

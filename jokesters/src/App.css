@@ -23,8 +23,36 @@
 
 
 
-html body{
+.main {
 
   margin:5%;
   padding:5px;
+}
+
+
+.nav{
+display: flex;
+padding:20px;
+color:white;
+justify-content: space-evenly;
+margin:3% 0;
+
+}
+
+
+.navItem a{
+  padding:20px;
+  background-color: Blue;
+  color:white;
+  border-radius:10px;
+  
+}
+
+
+.navItem a:hover{
+  padding:15px;
+  background-color: lightBlue;
+  color:black;
+  border-radius:15px;
+  
 }

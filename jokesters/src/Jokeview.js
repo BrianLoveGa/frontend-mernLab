@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import './App.css';
+import './Jokeview.css';
 import jokelist from './data/jokelist.json';
 
 export default class Jokeview extends Component {
@@ -17,7 +17,7 @@ export default class Jokeview extends Component {
 					<h2>Punchline</h2>
 					<h3>{joke.punchline}</h3>
 				</div>
-				<Link to={`/jokes/edit/${joke.id}`}>Edit This Joke</Link>
+				<Link className="red" to={`/jokes/edit/${joke.id}`}>Edit This Joke</Link>
 					
 				
 					

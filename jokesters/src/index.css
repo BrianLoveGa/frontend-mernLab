@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+a{
+  text-decoration:none;
+  color:green;
+  font-size:20px;
+
+}
+
+
+a:hover{
+  text-decoration:none;
+  color:rgb(250, 250, 250);
+  font-size:25px;
+  background-color: silver;
+  border-radius:10px;
+
+}
+
+
+ul {
+
+  list-style: square;
+}
+
+
+li{
+
+  font-size:20px;
+  padding:25px;
+
+}
